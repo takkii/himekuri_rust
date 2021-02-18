@@ -1,8 +1,13 @@
 [package]
-name = "CLazyYou"
-version = "0.1.0"
+name = "himekuri_rust"
+version = "1.0.0"
 authors = ["Takayuki Kamiyama <karuma.reason@gmail.com>"]
 edition = "2018"
+
+[lib]
+name = "himekuri_rust"
+path = "src/main.rs"
+crate-type = ["dylib"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
