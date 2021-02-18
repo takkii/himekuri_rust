@@ -6,7 +6,8 @@ use chrono::offset::FixedOffset;
 use chrono::prelude::{Datelike, DateTime, Local, Timelike, Utc};
 use chrono_tz::Japan;
 
-fn main() {
+#[no_mangle]
+pub extern fn himekuri() {
     let utc = Utc::now().naive_utc();
     let dt = Japan.from_utc_datetime(&utc);
     let ja_utc = dt.format("時刻を表示 : %Y年%m月%d日 : %H時%M分%S秒 :").to_string();
@@ -43,3 +44,6 @@ fn main() {
     println!("日めくり数え番号 : {}", version);
 }
 
+fn main() {
+    himekuri()
+}
