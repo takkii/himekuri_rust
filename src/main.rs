@@ -14,7 +14,7 @@ pub extern fn himekuri() {
     // 令和10年のとき0を消す
     let reiwa = "令和0".to_string() + &(dt.year() - 2018).to_string() + &dt.format("年%m月%d日").to_string();
     // 令和10年のとき0を消す
-    let reiwa_alpha = "R0".to_string() + &(dt.year() - 2018).to_string() + &dt.format("年%m月%d日").to_string();
+    let reiwa_alpha = "R0".to_string() + &(dt.year() - 2018).to_string() + &dt.format(".%m.%d").to_string();
     let one = dt.format("%j").to_string();
     let num_one: i64 = one.parse().unwrap();
     let num_one_year: i64 = (366 - num_one);
@@ -37,7 +37,7 @@ pub extern fn himekuri() {
         println!("{} 土曜日", ja_utc);
     }
 
-    let version = "1.0.0";
+    let version = "1.0.1";
 
     println!("来年の1月1日まであと : {} 日です", num_one_year);
     println!("{} : {}", reiwa, reiwa_alpha);
