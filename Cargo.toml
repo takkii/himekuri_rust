@@ -1,6 +1,6 @@
 [package]
-name = "himekuri_rust"
-version = "1.0.0"
+name = "himekuri_public"
+version = "1.0.1"
 authors = ["Takayuki Kamiyama <karuma.reason@gmail.com>"]
 edition = "2018"
 
