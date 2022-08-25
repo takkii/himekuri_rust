@@ -39,27 +39,28 @@ pub(crate) fn main() {
             println!("{} 土曜日", ja_utc);
         }
 
+        // 日めくり数え番号
         let version = "1.0.2";
+
+        println!("来年の1月1日まであと : {} 日です", num_one_year);
 
         // 令和10年以降のとき0を消す
         if (dt.year() - 2018) < 10 {
+
         let _reiwa = "令和0".to_string() + &(dt.year() - 2018).to_string() + &dt.format("年%m月%d日").to_string();
         let _reiwa_alpha = "R0".to_string() + &(dt.year() - 2018).to_string() + &dt.format(".%m.%d").to_string();
 
-        println!("来年の1月1日まであと : {} 日です", num_one_year);
         println!("{} : {}", _reiwa, _reiwa_alpha);
-        println!("日めくり数え番号 : {}", version);
-        println!("来年の1月1日まであと : {} 日です", num_one_year);
 
         } else {
+
         let reiwa = "令和".to_string() + &(dt.year() - 2018).to_string() + &dt.format("年%m月%d日").to_string();
         let reiwa_alpha = "R".to_string() + &(dt.year() - 2018).to_string() + &dt.format(".%m.%d").to_string();
 
-        println!("来年の1月1日まであと : {} 日です", num_one_year);
         println!("{} : {}", reiwa, reiwa_alpha);
-        println!("日めくり数え番号 : {}", version);
-        println!("来年の1月1日まであと : {} 日です", num_one_year);
     
         }
+        println!("日めくり数え番号 : {}", version);
+        println!("来年の1月1日まであと : {} 日です", num_one_year);
     };
 }
